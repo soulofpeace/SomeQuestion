@@ -93,6 +93,8 @@ object TreeFolding{
 
   }
 
+
+  O(log n + n)
   def isFoldable[A](tree:Tree[A]):Boolean={
     val nodesToVisit = tree match{
         case Tree(a, None, None) =>{
@@ -113,7 +115,7 @@ object TreeFolding{
     nodesToVisit
 
   }
-
+   //O(log n)
   def bft[A](nodesToVisit:Queue[(Tree[A], String)], sequenceTree:List[String]):List[String]={
     if(nodesToVisit.isEmpty){
       sequenceTree
@@ -142,6 +144,7 @@ object TreeFolding{
 
   }
 
+  //O(n)
   def invertSequenceTree(sequenceTree:List[String]):List[String]={
     sequenceTree match{
       case Nil =>{
