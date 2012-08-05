@@ -94,7 +94,7 @@ object TreeFolding{
   }
 
 
-  O(log n + n)
+  //(log n + n)
   def isFoldable[A](tree:Tree[A]):Boolean={
     val nodesToVisit = tree match{
         case Tree(a, None, None) =>{
