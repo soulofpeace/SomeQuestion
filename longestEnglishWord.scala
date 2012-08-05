@@ -224,6 +224,7 @@ object LongestEnglishWord{
 
     val dictionary = Source.fromFile("/usr/share/dict/words").getLines.map(_.toLowerCase).toList
     val wordTrie = buildTrie(dictionary)
+    //result => pauciarticulate
     println("result:" + findLongestWord("", periodTableSymbol, wordTrie))
   }
 
